@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+// baseUrl
+const baseUrl = 'http://localhost:3000/api/v1/admin';
+
 // 请求拦截器
 axios.interceptors.request.use(config => {
   return config;
