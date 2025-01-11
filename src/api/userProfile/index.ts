@@ -2,17 +2,17 @@ import { get, post, put } from '../index';
 
 // 获取用户信息
 export const getOneUserProfile = (userId: string) => {
-  return get(`/getOneUserProfile/${userId}`, {});
+  return get(`/admin/getOneUserProfile/${userId}`, {});
 }
 
 // 获取用户列表
 export const getAllUserProfileList = (userId: string) => {
-  return get(`/getAllUserProfileList/${userId}`, {});
+  return get(`/admin/getAllUserProfileList/${userId}`, {});
 }
 
 // 禁用用户
 export const banUser = (data: any) => {
-  return post('/banUser', data);
+  return post('/admin/banUser', data);
 }
 
 // // 解禁用户
@@ -23,26 +23,26 @@ export const banUser = (data: any) => {
 
 // 修改用户信息
 export const updateUserProfile = (userId: string, data: any) => {
-  return put(`/updateUserProfile/${userId}`, data);
+  return put(`/admin/updateUserProfile/${userId}`, data);
 }
 
 // 设置用户信息
-export const setUserProfile = (data: any) => {
-  return post('/setUserProfile', data);
+export const setUserProfile = async (data: any) => {
+  return await post('/admin/setUserProfile', data);
 }
 
 // 增加用户等级
-export const incrementUserLevel = (data: any) => {
-  return post('/incrementUserLevel', data);
+export const incrementUserLevel = async (data: any) => {
+  return await post('/admin/incrementUserLevel', data);
 }
 
 // 增加用户经验
-export const incrementUserExp = (data: any) => {
-  return post('/incrementUserExp', data);
+export const incrementUserExp = async (data: any) => {
+  return await post('/admin/incrementUserExp', data);
 }
 
 // 获取用户等级经验状态
-export const getUserLevelAndExp = (params: any) => {
-  return get('/getUserLevelAndExp', params);
+export const getUserLevelAndExp = async (params: any) => {
+  return await get('/admin/getUserLevelAndExp', params);
 }
 
