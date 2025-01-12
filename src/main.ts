@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import "./assets/style/global.css";
 import axios from './api/index';
-import pinia from './store/index';
+import pinia from './stores/index';
 import router from './routers/index';
 import { DatePicker } from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';

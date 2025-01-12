@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import AdminRoute from './admin';
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: [],
+  routes: [...AdminRoute],
 });
 
 export default router;
