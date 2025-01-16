@@ -5,6 +5,8 @@ const baseUrl = 'http://localhost:3000/api/v1';
 
 // 请求拦截器
 axios.interceptors.request.use(config => {
+  // baseUrl
+  config.baseURL = baseUrl;
   return config;
 }, error => {
   return Promise.reject(error);

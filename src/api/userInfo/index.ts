@@ -6,7 +6,7 @@ import { get, post, put, del } from '../index';
 
 // 注册
 export const register = async (data: any) => {
-  return await post('/register', data);
+  return await post('/signup', data);
 };
 
 // 登录
